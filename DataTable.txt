@@ -1,0 +1,74 @@
+	
+
+[Client Order LHS]
+
+Compr.Sequence	-Last AuditTrailID of LHS Client Order, [Orders].LastAuditTrailId 
+
+AvgPrice - average price of LHS order 	, [Orders].AveragePrice  
+
+TotalVolume	-LHS order traded volume, [Orders].DoneVolumeToday
+
+DestOrderNo = RHS Desk Order No
+
+[DESK Order RHS]
+
+Key- RHS desk order number, [Orders].OrderNo or [Orders].RootParentOrderNo 
+
+ExtDestOrderNo = LHS order no
+
+---------------------
+ClientDeskOrdersTable
+
+[Client Order LHS],[DESK Order RHS] on [Client Order LHS].DestOrderNo 
+
+---------------------
+
+[Child Order RHS]
+
+Symbol	-Symbol, [Orders].Code
+
+ExchangeId-Exchange, [Orders].Exchange
+
+Side	- Brought / Sold, [Orders].Side = [OrderSide].Properties = [OrderSide].Side
+
+OrderNumber -exchange order number, ExtDestOrderNo of traded RHS Child Order, [Orders].ExtDestOrderNo
+
+
+---------------------
+ClientChildsOrdersTable
+---------------------
+
+
+[Trade RHS]
+
+Sequence - AuditTrailId of RHS trade, [Trades].AuditTrailId 
+
+Price	- RHS trade price, [Trades].Price
+
+Volume	- RHS trade volume, [Trades].Volume	
+
+UserId	- trader id on RHS , [Trades].TradeMarkersRaw.Y()
+
+UserOrderId - ClientOrderID, [Trades].PrimaryClientOrderID or parent or child [Orders].ClientOrderID
+
+AccountType -	Account Type , [Trades].TradeMarkersRaw.C
+
+AccountID - LHS Account Code	, [Trades].TradeMarkersRaw.O
+
+TradeNumber - SourseTradeNo, [Trades].TradeNo
+
+TradeNumber2	- first RHS TradeNumber of same LHS client order, based on "Compr.Sequence" , First [Trades].TradeNo
+
+
+---------------------
+OrdersTradesTable
+---------------------
+
+
+Report Add-in
+
+Day- Day of Month
+ExchangeId2 - always OME
+ComprOrderNumber -	combination of "Z" & Format(SourceDate, "yyyyMMdd") & "FCC" & Key, 	
+Combo	- combination of  Day & "," & comprSequence & "," & exchangeId & "," & userId 
+Combo2 - combination of Day & "," & comprSequence & "," & userId 

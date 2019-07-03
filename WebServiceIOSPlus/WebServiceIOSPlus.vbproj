@@ -1,0 +1,2760 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B7F8CC5E-D888-44B0-84FA-2C0E83F367C7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WebServiceIOSPlus</RootNamespace>
+    <AssemblyName>WebServiceIOSPlus</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>WebServiceIOSPlus.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>WebServiceIOSPlus.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Service References\IOSPLUSBase\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccountAccessAddOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccountAccessChangeGetUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccountAccessGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccountAccessRemoveOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccountAccessSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccountAmendConcurrentOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccountAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccountCacheWhiteListGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccountCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccountCustomDataGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccountCustomDataSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccountDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccountGetByAccountSequenceNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccountGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccountGroupAccessGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccountGroupAccessSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccountGroupAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccountGroupCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccountGroupDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccountGroupDetailGet2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccountGroupDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccountGroupGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccountGroupMembershipGetByMembershipSequenceNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccountGroupMembershipGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccountHoldTradeSettingGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccountHoldTradeSettingSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccountIDGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccumulatedValueGetByAccountGroupOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccumulatedValueGetByAccountOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccumulatedValueGetBySystemOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccumulatedValueGetByUserOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccumulatedValueSetByAccountGroupOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccumulatedValueSetByAccountOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccumulatedValueSetBySystemOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AccumulatedValueSetByUserOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdminMappingAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdminMappingCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdminMappingDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdminMappingGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdminMappingTypeGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdvisorAccessGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdvisorAccessSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdvisorAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdvisorCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdvisorDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdvisorGetByAdvisorSequenceNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdvisorGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdvisorGroupAccessGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdvisorGroupAccessSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdvisorGroupAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdvisorGroupCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdvisorGroupDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdvisorGroupDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdvisorGroupGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdvisorGroupMembershipGetByMembershipSequenceNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdvisorGroupMembershipGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdvisorLinkedAccountGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdvisorLinkedUserGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdvisorSuperGroupAccessGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdvisorSuperGroupAccessSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdvisorSuperGroupAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdvisorSuperGroupCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdvisorSuperGroupDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdvisorSuperGroupDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdvisorSuperGroupGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdvisorSuperGroupMembershipGetByMembershipSequenceNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AdvisorSuperGroupMembershipGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AlertAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AlertCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AlertDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AlertEventGetAllOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AlertGetByAlertNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AlertGetByUserOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AlertGetByUserUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AlertNotificationAcknowledgeOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AlertNotificationGetByUserOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AlertNotificationGetByUserUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AlgoDestinationOrderingGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AlgoDestinationOrderingSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ArchiveAuditTrailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ArchiveDictionaryGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ArchiveFilterGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ArchiveLogViewGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ArchiveOrderPadSnapshotGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AttributeCategoryGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AttributeDataTypeGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AttributeDestinationAddOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AttributeDestinationGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AttributeDestinationGroupGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AttributeDestinationGroupSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AttributeDestinationRemoveOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AttributeDestinationSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AttributeFlagGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AttributeGetByUserOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AttributeGlobalAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AttributeGlobalCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AttributeGlobalDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AttributeGlobalGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AttributesDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AttributeSendExternalFlagGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AttributesGlobalGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AttributeTranslationGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AttributeTranslationSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AttributeUserDefaultGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AttributeUserDefaultSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AuditTrailGetByAccountGroupOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AuditTrailGetByAccountOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AuditTrailGetByAdvisorGroupOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AuditTrailGetByAdvisorOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AuditTrailGetByAdvisorSuperGroupOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AuditTrailGetByInternalUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AuditTrailGetByOrderNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AuditTrailGetByOrderNumberUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AuditTrailGetBySourceUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AuditTrailGetByUserAccountGroupOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AuditTrailGetByUserOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AuditTrailGetByUserUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AuthorizeOrderAuthorizeOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AuthorizeOrderDenyOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AuthorizeOrderGetByUserOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AuthorizeOrderGetByUserUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AuthorizeOrderLockOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AuthorizeOrderUnlockOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AuthorizeOrderUnmanageOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AuthorizeOrderUserSetAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AuthorizeOrderUserSetCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AuthorizeOrderUserSetDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AuthorizeOrderUserSetDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AuthorizeOrderUserSetGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AuthorizeOrderUserSetRuleAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AuthorizeOrderUserSetRuleCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.AuthorizeOrderUserSetRuleDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BackOfficeCodeRuleCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BackOfficeCodeRuleDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BackOfficeCodeRuleGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BackOfficeCodeSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BackOfficeCodeTypeGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BackOfficeProviderGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BasicCommissionTypeGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingAmend2DebugOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingAmend2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingAuditTrailGetByBookingNumber2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingAuditTrailGetByBookingNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingAuditTrailGetByBookingNumberUpdates2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingAuditTrailGetByBookingNumberUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingAuditTrailGetByOrganization2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingAuditTrailGetByOrganizationOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingAuditTrailGetByOrganizationUpdates2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingAuditTrailGetByOrganizationUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingAuditTrailGetByUser2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingAuditTrailGetByUserOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingAuditTrailGetByUserUpdates2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingAuditTrailGetByUserUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingCodeAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingCodeCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingCodeDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingCodeDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingCodeGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingContractClassGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingCreate2DebugOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingCreate2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingDeleteDebugOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingGetByBookingNumber2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingGetByBookingNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingGetByBookingNumberUpdates2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingGetByBookingNumberUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingGetByOrganization2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingGetByOrganizationOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingGetByOrganizationUpdates2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingGetByOrganizationUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingGetByUser2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingGetByUserExOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingGetByUserOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingGetByUserUpdates2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingGetByUserUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingMatchedTradesDetailGetByBookingNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingMatchedTradesDetailGetByTradeNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingMatchedTradesGetByOrganizationOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingMatchedTradesGetByOrganizationUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingMatchOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingOrganizationCommissionGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingOrganizationCommissionSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BookingUnmatchedTradeGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BrokerNumberGetByDestinationOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BulkAllocationCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BulkAllocationDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BulkAllocationGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BulkOrderAddOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BulkOrderCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.BulkOrderRemoveOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CacheContainsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CachePurgeOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ClearingIDAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ClearingIDCheckOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ClearingIDCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ClearingIDDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ClearingIDGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ClearingIDResolveOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CombinationTradeReportCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CommissionCategoryAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CommissionCategoryCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CommissionCategoryDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CommissionCategoryGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CommissionCategoryGroupAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CommissionCategoryGroupCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CommissionCategoryGroupDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CommissionCategoryGroupGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CreditLimitAccountOverallDetailGetByAccountOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CreditLimitExemptionRuleCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CreditLimitExemptionRuleDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CreditLimitExemptionRuleGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CreditLimitOverallAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CreditLimitOverallCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CreditLimitOverallDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CreditLimitOverallDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CreditLimitOverallGetAllOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CreditLimitSecurityExposureAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CreditLimitSecurityExposureCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CreditLimitSecurityExposureDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CreditLimitSecurityExposureDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CreditLimitSecurityExposureGetAllOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CreditLimitStockGroupGetAllOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CreditLimitStockGroupSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CrossingAbortOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CrossingConfirmOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CrossingCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CrossReferenceAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CrossReferenceCheckOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CrossReferenceCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CrossReferenceDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CrossReferenceEncodingRuleAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CrossReferenceEncodingRuleCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CrossReferenceEncodingRuleDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CrossReferenceEncodingRuleGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CrossReferenceEncodingRuleTemplateGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CrossReferenceGetByDestinationOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CrossReferenceGetByDestinationUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CrossReferenceGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CrossReferencePrefixRuleAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CrossReferencePrefixRuleCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CrossReferencePrefixRuleDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CrossReferencePrefixRuleGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CrossReferenceResolveAccountOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CrossReferenceResolveOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CurrencyAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CurrencyCommandGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CurrencyCommandSettingGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CurrencyCommandSettingSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CurrencyConversionAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CurrencyConversionCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CurrencyConversionDataSourceAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CurrencyConversionDataSourceCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CurrencyConversionDataSourceDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CurrencyConversionDataSourceGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CurrencyConversionDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CurrencyConversionDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CurrencyCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CurrencyDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CurrencyDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CurrencyExchangeAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CurrencyExchangeCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CurrencyExchangeDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CurrencyExchangeDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CurrencyExchangeGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CurrencyGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CustodianGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CustomPriceRangeAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CustomPriceRangeCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CustomPriceRangeDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.CustomPriceRangeGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DebugFundLimitDataCacheGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DebugFundLimitDataGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DebugIosConfigGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DebugIosConfigResetAllOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DebugIosConfigResetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DebugIosConfigSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DebugIosEmailOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DebugIosReloadCacheOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DebugIosSuperGroupBiMapDiffGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DebugIosSuperSuperGroupBiMapDiffGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DebugPriceStepGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DebugQuoteDataGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DebugReferenceDataGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DebugScheduleDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DebugScheduleSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationDetailGetByTypeIosPlusOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationExtendedPropertyGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationGetByDestinationGroupOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationGetByUserAndAccountDestinationGroupOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationGroupCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationGroupDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationGroupDestinationAddOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationGroupDestinationRemoveOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationGroupGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationGroupMembershipGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationMappingAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationMappingCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationMappingDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationMappingGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationPropertyGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationReplicateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationReplicateUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationSchemaGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationServiceRestartOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationSetByTypeIosPlusOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationSettingGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationSettingSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationStatusGetByUserOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationSubTypeGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationTradesFilterAccountAddOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationTradesFilterAccountRemoveOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationTradesFilterGetByAccountOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DestinationTradesFilterGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DiscretionaryUserSetAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DiscretionaryUserSetCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DiscretionaryUserSetDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DiscretionaryUserSetDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DiscretionaryUserSetGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DiscretionaryUserSetRuleAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DiscretionaryUserSetRuleCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DiscretionaryUserSetRuleDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DynamicLimitDefinitionAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DynamicLimitDefinitionCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DynamicLimitDefinitionDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.DynamicLimitDefinitionDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.EmailTemplateAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.EmailTemplateCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.EmailTemplateEventGetAllOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.EmailTemplateGetByEventNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ErrorGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCAcceptOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCAuditTrailGetAllOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCAuditTrailGetAllUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCAuditTrailGetByBookingNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCAuditTrailGetByBookingNumberUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCAuditTrailGetByETCNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCAuditTrailGetByETCNumberUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCAuditTrailGetByOrganizationOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCAuditTrailGetByOrganizationUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCAuditTrailGetByUserOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCAuditTrailGetByUserUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCAutoCreateFromBookingOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCBillingDetailsGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCCancelOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCCreateFromBookingOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCCustodianAcknowledgeOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCGetAllOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCGetAllUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCGetByBookingNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCGetByBookingNumberUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCGetByCustodianOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCGetByCustodianUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCGetByETCNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCGetByETCNumberUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCGetByOrganizationOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCGetByOrganizationUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCGetByUserOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCGetByUserUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCPredefinedBrokerAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCPredefinedBrokerCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCPredefinedBrokerDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCPredefinedBrokerDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCPredefinedBrokerGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCRejectOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCRejectReasonAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCRejectReasonCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCRejectReasonDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCRejectReasonGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCSendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCSendToCustodianOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCSettlementMethodGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCSettlementStatusAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCStatusGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCSummaryGetAllOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCSummaryGetByOrganizationOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCSummaryGetByUserOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ETCSWIFTTestResponseOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ExchangeGroupAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ExchangeGroupCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ExchangeGroupDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ExchangeGroupGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ExchangeGroupRuleAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ExchangeGroupRuleCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ExchangeGroupRuleDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ExchangeGroupRuleGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ExchangeGroupSecurityExtraGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ExchangeGroupSecurityExtraSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ExecutionInstructionAccountDefaultAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ExecutionInstructionAccountDefaultCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ExecutionInstructionAccountDefaultDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ExecutionInstructionAccountDefaultGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ExternalApplicationDataDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ExternalApplicationDataGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ExternalApplicationDataSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.FailAndCancelOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.FeeCategoryAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.FeeCategoryCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.FeeCategoryDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.FeeCategoryGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.FeeCategoryGroupAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.FeeCategoryGroupCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.FeeCategoryGroupDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.FeeCategoryGroupGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ForceBookingMatchOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.FxRateQuoteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.FxSourceConfigurationGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.FxSourceConfigurationSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.GlobalRuleSetAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.GlobalRuleSetCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.GlobalRuleSetDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.GlobalRuleSetDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.GlobalRuleSetGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.GlobalRuleSetRuleAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.GlobalRuleSetRuleCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.GlobalRuleSetRuleDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.GlobalSettingsGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.IndicationAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.IndicationBookGetByUserOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.IndicationBookGetByUserUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.IndicationChildAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.IndicationChildCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.IndicationChildDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.IndicationChildOrganizationGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.IndicationCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.IndicationDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.IndicationGetByUserOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.IndicationGetByUserUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.IndicationParentAndSingleChildAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.InfoCategoriesGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.InfoColumnsGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.InfoErrorsGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.InfoMethodsGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.InfoMethodsInfoGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.InfoParametersGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.InfoServicesGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.InfoWSDLStringGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.InternalBrokerBookGetByAccountOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.InternalBrokerBookGetByAccountUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.InternalBrokerBookGetByUserOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.InternalBrokerBookGetByUserUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.IRESSSessionEndOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.IRESSSessionStartOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LegalEntityGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LegalEntityTypeGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitAccountAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitAccountCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitAccountGeneralLimitsAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitAccountGeneralLimitsCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitAccountGeneralLimitsGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitAccountGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitAccountGroupAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitAccountGroupCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitAccountGroupGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitAccountPriceRangeAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitAccountPriceRangeCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitAccountPriceRangeGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitAccountStockGroupLimitsAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitAccountStockGroupLimitsCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitAccountStockGroupLimitsGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitDefinitionGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalCapitalTradingExchangeAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalCapitalTradingExchangeCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalCapitalTradingExchangeDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalCapitalTradingExchangeGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalCapitalTradingGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalCapitalTradingSecurityAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalCapitalTradingSecurityCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalCapitalTradingSecurityDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalCapitalTradingSecurityGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalCapitalTradingSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalMasterAccountGeneralLimitsAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalMasterAccountGeneralLimitsCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalMasterAccountGeneralLimitsGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalMasterAccountGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalMasterAccountSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalMasterUserGeneralLimitsAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalMasterUserGeneralLimitsCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalMasterUserGeneralLimitsGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalMasterUserGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalMasterUserGrossDayLimitsByAccountTypeAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalMasterUserGrossDayLimitsByAccountTypeCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalMasterUserGrossDayLimitsByAccountTypeDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalMasterUserGrossDayLimitsByAccountTypeGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalMasterUserNetDayLimitsByAccountTypeAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalMasterUserNetDayLimitsByAccountTypeCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalMasterUserNetDayLimitsByAccountTypeDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalMasterUserNetDayLimitsByAccountTypeGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalMasterUserPriceRangeAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalMasterUserPriceRangeCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalMasterUserPriceRangeGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalMasterUserSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalMasterUserStockGroupLimitsAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalMasterUserStockGroupLimitsCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalMasterUserStockGroupLimitsGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalSpecialAccountGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalSpecialAccountSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalStockTradingBanAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalStockTradingBanCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalStockTradingBanDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalStockTradingBanGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGlobalStockTradingBanTradeActionGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGroupAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGroupCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGroupDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitGroupGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitOrderTypeGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitScheduleResetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitUserAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitUserCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitUserGeneralLimitsAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitUserGeneralLimitsCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitUserGeneralLimitsGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitUserGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitUserGrossDayLimitsByAccountTypeAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitUserGrossDayLimitsByAccountTypeCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitUserGrossDayLimitsByAccountTypeDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitUserGrossDayLimitsByAccountTypeGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitUserMandatoryFieldsAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitUserMandatoryFieldsCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitUserMandatoryFieldsGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitUserNetDayLimitsByAccountTypeAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitUserNetDayLimitsByAccountTypeCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitUserNetDayLimitsByAccountTypeDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitUserNetDayLimitsByAccountTypeGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitUserPriceRangeAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitUserPriceRangeCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitUserPriceRangeGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitUserStockGroupLimitsAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitUserStockGroupLimitsCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LimitUserStockGroupLimitsGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LogViewGetAllOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.LogViewGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.MessageFilterAddOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.MessageFilterDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.MessageFilterGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.MiscFeesSWIFTQualifierGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.MruSecurityGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.MultiLegSecurityDestinationMappingAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.MultiLegSecurityDestinationMappingCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.MultiLegSecurityDestinationMappingDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.MultiLegSecurityDestinationMappingGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.NonMaterialFieldAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.NonMaterialFieldCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.NonMaterialFieldDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.NonMaterialFieldGetByDestinationOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.NonMaterialFieldGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorOnlineUserGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorOrderAcknowledgeOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorOrderDenyOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorOrderDirectToMarketAndIgnoreOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorOrderSendToMarket2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorOrderSendToMarketAndIgnoreOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorOrderSendToMarketOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorOrderTransferToPoolOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorOrderTransferToUserOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorPadDMARuleSetDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorPadDMARuleSetGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorPadDMARuleSetRuleAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorPadDMARuleSetRuleCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorPadDMARuleSetRuleDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorPadPendingOrderGetByAdvisorGroupOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorPadPendingOrderGetByAdvisorGroupUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorPadPendingOrderGetByAdvisorOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorPadPendingOrderGetByAdvisorSuperGroupOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorPadPendingOrderGetByAdvisorSuperGroupUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorPadPendingOrderGetByAdvisorUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorPadPendingOrderGetByUserOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorPadPendingOrderGetByUserUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorPadUserSetAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorPadUserSetCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorPadUserSetDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorPadUserSetDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorPadUserSetGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorPadUserSetRuleAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorPadUserSetRuleCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorPadUserSetRuleDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorPadWorkingOrderGetByAdvisorGroupOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorPadWorkingOrderGetByAdvisorGroupUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorPadWorkingOrderGetByAdvisorOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorPadWorkingOrderGetByAdvisorSuperGroupOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorPadWorkingOrderGetByAdvisorSuperGroupUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorPadWorkingOrderGetByAdvisorUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorPadWorkingOrderGetByUserOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorPadWorkingOrderGetByUserUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OperatorStatusSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OptionPricingParametersGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OptionPricingParametersSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderAmend2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderAmendDoneForDay2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderAmendDoneForDayOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderBackOfficeStatusGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderBasketDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderBasketOrdersAddOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderBasketOrdersRemoveOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderBulkAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderCleanupAttributesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderCreate2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderCreate3Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderCreateAsyncOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderCreateFXConnectOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderCrossingCreate2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderCrossingCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderDestinationMoveOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderDirectDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderEntrySkinAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderEntrySkinCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderEntrySkinDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderEntrySkinDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderEntrySkinGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderEntrySkinMappingAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderEntrySkinMappingCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderEntrySkinMappingDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderEntrySkinMappingFieldGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderEntrySkinMappingGetDefaultOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderEntrySkinMappingGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderEntrySkinMappingResetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderFlagGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderGiveVolumeToSibling2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderGiveVolumeToSiblingOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderInactiveAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderLimitTypeGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderMoveAsyncOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderMoveOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderNumberGetByOrderTagOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderPadGetByAccountGroupOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderPadGetByAccountGroupUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderPadGetByAccountOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderPadGetByAccountUpdatesForOwnersAndChildrenOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderPadGetByAccountUpdatesForOwnersAndChildrenUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderPadGetByAccountUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderPadGetByAdvisorGroupOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderPadGetByAdvisorGroupUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderPadGetByAdvisorOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderPadGetByAdvisorSuperGroupOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderPadGetByAdvisorSuperGroupUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderPadGetByAdvisorUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderPadGetByOrderNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderPadGetByOrderNumberUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderPadGetByUserAccountGroupOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderPadGetByUserAccountGroupUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderPadGetByUserOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderPadGetByUserUpdatesForOwnersAndChildrenOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderPadGetByUserUpdatesForOwnersAndChildrenUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderPadGetByUserUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderParentSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderPercentageReleaseOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderRoutingTypeGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderScanOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderSearchGetByAccountGroupOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderSearchGetByAccountOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderSearchGetByAdvisorGroupOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderSearchGetByAdvisorOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderSearchGetByAdvisorSuperGroupOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderSearchGetByOrderNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderSearchGetByUserAccountGroupOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderSearchGetByUserOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrdersForceQueuedCancelOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderSideFlagGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderSideGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderSyncGetByOrderNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderSystemAmendMarketDetailOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderSystemAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderTrailerCodeGetDefaultsByOrderNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderTrailerCodeGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderTreeBufferOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrderUpdateReasonGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrganizationAccessGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrganizationAccessSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrganizationAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrganizationCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrganizationCustodianAccessGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrganizationDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrganizationGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrganizationGroupAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrganizationGroupCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrganizationGroupDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrganizationGroupDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrganizationGroupGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrganizationGroupOrganizationAddOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.OrganizationGroupOrganizationRemoveOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.PostTradeStatusGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.PostTradeStatusSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.RequestForQuoteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.RoleAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.RoleCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.RoleDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.RoleDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.RoleGetByRoleSequenceNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.RoleGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.RolePermissionGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ScheduleAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ScheduleCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ScheduleDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ScheduleDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ScheduleExecuteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ScheduleGetAllOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ScheduleGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.SchedulePropertyGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ScheduleTypeGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.SecurityExtraGetBySecurityOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.SecurityExtraSetBySecurityOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.SecurityMultiLegCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.SequenceCheckpointGetUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ServerDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ServerTimeZoneGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ServiceDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ServiceDetailSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ServiceSessionEndOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ServiceSessionStartOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.SessionRequestEndOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.SessionRequestsGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.SessionsGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.SetOrderDFDFlagOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.SpecialProcessingRulesGetAllOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.SpecialProcessingRulesGetByDestinationOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.SpecialProcessingRulesSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.SpecialProcessingRulesUserCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.SpecialProcessingRulesUserDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.SpecialProcessingRulesUserGetAllOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.SpecialProcessingRulesUserGetByDestinationOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.StatisticsCombinedCountGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.StatisticsOrderCostDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.StatisticsOrderCostSourceIDGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.StatisticsOrderCostSummaryGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.StatisticsOrderCountGroupByAccountGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.StatisticsOrderCountGroupByDestinationGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.StatisticsOrderCountGroupBySourceGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.StatisticsOrderTPSGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.StatisticsTradeCountGroupByAccountGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.StatisticsTradeCountGroupByDestinationGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.StatisticsTradeCountGroupBySourceGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.StatisticsTradeTPSGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.STIOrderDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.StiOrderLoadOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.StockGroupCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.StockGroupDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.StockGroupGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.StockGroupSecurityCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.StockGroupSecurityDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.StockGroupSecurityGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.SystemOrderEditOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.ThreadingActionOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TiCheckpointGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TiCheckpointSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TiDestinationStateRequestOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TiOrderAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TiOrderCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TiOrderIndexRecoverOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TiOrderLoadByTiOrderNoOrOrderIndexOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TiOrderLoadForActiveOrdersOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TiOrderManageGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TiOrderSeqDataLoadOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TiOrderSeqDataSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TiOrderStateRecoveryEndOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TiPropertyStoreGetByDestinationOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TiSessionBeginOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TiSpecialProcessingRulesGetAllOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TiTradeIndexRecoverOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TiTradeInsertOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TiTradeLoadByTiOrderNoOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TiTradeLoadByTradeIndexOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TiTradeLoadForActiveOrdersOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TiTradeUpdateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TracerDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TracerDetailSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeCancelOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeGetByAccountGroupOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeGetByAccountGroupUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeGetByAccountOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeGetByAccountUpdatesForOwnersAndChildrenOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeGetByAccountUpdatesForOwnersAndChildrenUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeGetByAccountUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeGetByAdvisorGroupOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeGetByAdvisorGroupUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeGetByAdvisorOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeGetByAdvisorSuperGroupOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeGetByAdvisorSuperGroupUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeGetByAdvisorUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeGetByDestinationOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeGetByDestinationUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeGetByMarketDataTradeNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeGetByOrderNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeGetByOrderNumberUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeGetByOrganizationOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeGetByOrganizationUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeGetByUserAccountGroupOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeGetByUserAccountGroupUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeGetByUserForFixOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeGetByUserOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeGetByUserUpdatesForOwnersAndChildrenOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeGetByUserUpdatesForOwnersAndChildrenUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeGetByUserUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeInternalCrossingOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeMarketCrossingOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeReportAcceptOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeReportCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeReportRejectOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeReportWithdrawCancelOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeReportWithdrawOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradesGetByUserOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradesGetByUserUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeSplitAuditTrailGetAllOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeSplitAuditTrailGetBySplitNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeSplitCancelOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeSplitCorrectTrade2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeSplitCorrectTradeOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeSplitCreate2Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeSplitCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeSplitDetailGetAllOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeSplitDetailGetAllUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeSplitDetailGetBySplitNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeSplitGetAllOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeSplitGetAllUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeSplitGetBySinkTradeNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeSplitGetBySourceOrderNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeSplitGetBySourceOrderNumberUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeSplitOrderDetailGetAllOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeSplitOrderDetailGetAllUpdatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeSplitOrderDetailGetBySplitNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeTransferInOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeTransferOutOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeTypeRefDataGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TradeTypeRefDataSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TrailerCodeGetAllOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TrailerCodeGetByOrganizationOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TranslationGroupCopyOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TranslationGroupCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TranslationGroupDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TranslationGroupGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TriggerAlertOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.TriggerGTDExpiryAlertsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.UnlistedSecurityAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.UnlistedSecurityCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.UnlistedSecurityDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.UnlistedSecurityDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.UserAccountGroupAccessGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.UserAccountGroupAccessSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.UserAccountGroupDeleteOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.UserAccountGroupDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.UserAccountGroupGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.UserAccountGroupSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.UserAmendOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.UserCreateOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.UserDetailGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.UserDirectAccountAccessGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.UserDirectAccountAccessSetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.UserGetByAccountAccessSequenceNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.UserGetByAccountGroupAccessSequenceNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.UserGetByAdvisorAccessSequenceNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.UserGetByAdvisorGroupAccessSequenceNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.UserGetByAdvisorSuperGroupAccessSequenceNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.UserGetByRolesSequenceNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.UserGetByUserSequenceNumberOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.UserGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.WebDnsGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.XrefDecodeRuleAddOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.XrefDecodeRuleDelOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\WebServiceIOSPlus.IOSPLUSBase.XrefDecodeRuleGetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IOSPLUSBase\wsdl.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\IOSPLUSBase\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IOSPLUSBase\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IOSPLUSBase\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IOSPLUSBase\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
